@@ -4,7 +4,7 @@ public class Main{
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int N = scan.nextInt();
-		scan.nextLine();
+		scan.nextLine(); //버퍼 비우기
 		
 		char[][] cookie = new char[N][N];
 		int headX = 0, headY = 0;
@@ -66,3 +66,4 @@ public class Main{
 		System.out.println(Aleft + " " + Aright + " " + Waist + " " + Lleft + " " + Lright);
 	}
 }
+
