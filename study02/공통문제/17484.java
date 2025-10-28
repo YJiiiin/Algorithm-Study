@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        //2차원 배
+        //2차원 배열
         int N = sc.nextInt();
         int M = sc.nextInt();
         int[][] a = new int[N][M];
@@ -48,4 +48,5 @@ public class Main {
         System.out.println(ans);
     }
 }
+
 
