@@ -3,13 +3,18 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt(), M = sc.nextInt();
+
+        //2차원 배
+        int N = sc.nextInt();
+        int M = sc.nextInt();
         int[][] a = new int[N][M];
         for (int i = 0; i < N; i++)
             for (int j = 0; j < M; j++)
                 a[i][j] = sc.nextInt();
 
         final int INF = 1_000_000_000;
+
+        //방향
         int[][][] dp = new int[N][M][3];
 
         // 첫 행 초기화: 방향 구분 의미 없으니 동일 값
@@ -34,6 +39,7 @@ public class Main {
             }
         }
 
+        //최소값 찾기
         int ans = INF;
         for (int j = 0; j < M; j++)
             for (int d = 0; d < 3; d++)
@@ -42,3 +48,4 @@ public class Main {
         System.out.println(ans);
     }
 }
+
