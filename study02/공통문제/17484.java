@@ -22,16 +22,16 @@ public class Main {
 
         for (int i = 1; i < N; i++) {
             for (int j = 0; j < M; j++) {
-                // d=0 (왼쪽 아래로 도착): 이전 칸은 (i-1, j+1)
+                // d=0 (왼쪽 아래로 도착): 이전 칸은 (i-1, j+1)->직진, 오른쪽 대각선
                 dp[i][j][0] = INF;
                 if (j + 1 < M) {
                     dp[i][j][0] = a[i][j] + Math.min(dp[i - 1][j + 1][1], dp[i - 1][j + 1][2]);
                 }
 
-                // d=1 (아래로 도착): 이전 칸은 (i-1, j)
+                // d=1 (아래로 도착): 이전 칸은 (i-1, j)->왼쪽,오른쪽 대각선
                 dp[i][j][1] = a[i][j] + Math.min(dp[i - 1][j][0], dp[i - 1][j][2]);
 
-                // d=2 (오른쪽 아래로 도착): 이전 칸은 (i-1, j-1)
+                // d=2 (오른쪽 아래로 도착): 이전 칸은 (i-1, j-1)->왼쪽 대각선, 직진
                 dp[i][j][2] = INF;
                 if (j - 1 >= 0) {
                     dp[i][j][2] = a[i][j] + Math.min(dp[i - 1][j - 1][0], dp[i - 1][j - 1][1]);
@@ -48,5 +48,6 @@ public class Main {
         System.out.println(ans);
     }
 }
+
 
 
