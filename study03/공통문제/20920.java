@@ -1,8 +1,8 @@
 import java.util.*;
-import java.io.*;  // 이 부분이 반드시 필요합니다!
+import java.io.*; 
 
 public class Main {
-    public static void main(String[] args) throws IOException { // IOException 던지기 추가
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
@@ -38,3 +38,4 @@ public class Main {
         br.close();
     }
 }
+
