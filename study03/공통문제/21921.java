@@ -23,7 +23,7 @@ public class Main{
 		for(int i=X; i<N; i++) {
 			sum = sum - arr[i-X] + arr[i]; //맨 첫번째 항은 빼주고 새로운 항을 더해준다.
 
-			//최대 방문자 수
+			//최대 방문자 수 비교
 			if(sum>max) {
 				max = sum;
 				count = 1;
@@ -44,5 +44,6 @@ public class Main{
 		
 	}
 }
+
 
 
