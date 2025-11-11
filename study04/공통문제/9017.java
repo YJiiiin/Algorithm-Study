@@ -34,7 +34,6 @@ public class Main{
 			}
 			
 			//팀 점수 합산
-			
 			for(Map.Entry<Integer, ArrayList<Integer>> entry : score.entrySet()) {
 				int teamNum = entry.getKey();
 				ArrayList<Integer> teamScore = entry.getValue();
@@ -63,4 +62,5 @@ public class Main{
 			System.out.println(winnerTeam);
 		}
 	}
+
 }
